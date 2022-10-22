@@ -41,7 +41,6 @@ hr {
     color: white;
   }
 }
-
 @keyframes colorProject {
   0% {
     color: #0101a0;
@@ -140,32 +139,6 @@ header p {
   border-bottom-left-radius: 5px;
 }
 
-table .legend_table {
-  font-size: 11px;
-  border-width: 1px;
-  border-color: #d3d3d3;
-  border-style: solid;
-}
-table .legend_table,
-table td {
-  border-width: 1px;
-  border-color: #d3d3d3;
-  border-style: solid;
-  padding: 2px;
-}
-
-div .table_content {
-  width: 80px;
-  text-align: center;
-}
-div .table_description {
-  width: 100px;
-}
-
-#operation {
-  font-size: 28px;
-}
-
 #network-popUp {
   display: none;
   text-align: center;
@@ -178,8 +151,16 @@ div .table_description {
   border-radius: 10px;
   color: white;
   z-index: 10;
-  transform: translateY(150px);
   background-color: rgba(22, 22, 22, 0.8784313725);
+}
+#network-popUp .legend_table {
+  font-size: 11px;
+  border-width: 1px;
+  border-color: #d3d3d3;
+  border-style: solid;
+}
+#network-popUp #operation {
+  font-size: 28px;
 }
 #network-popUp td {
   border: none;
