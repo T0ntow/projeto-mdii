@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <p>
+      PROJETO MATEMÁTICA DISCRETA 2: XXXXXXX
+      <br>
+      INTEGRANTES: Rafael de Jesus; João Henrique; Wellington Batista
+    </p>
+
+    <div class="container-logosMyP">
+      <a href="https://github.com/T0ntow" target="_blank" rel=external>
+        <img class="logosMyP" src="imagens/GitHub-Logo.png" alt="LogoGit">
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <img src="imagens/fundo.png" alt="fundo">
+
+    <div id="container">
+      <h2>Selecione o que deseja fazer</h2>
+      <ul>
+        <a href="#section-grafos">
+          <li>Criar grafos</li>
+        </a>
+        <a href="">
+          <li>Criar árvores</li>
+        </a>
+        <a href="">
+          <li>sla3 xxxxxxxxxxxxxxxxxxx</li>
+        </a>
+        <a href="">
+          <li>sla3 xxxxxxxxxxxxxxxxxxx</li>
+        </a>
+      </ul>
+    </div>
+  </main>
+  <hr>
+  <section id="section-grafos">
+    <p>
+      <select id="locale" onchange="draw();" disabled style="display: none;">
+      </select>
+    </p>
+    <div id="network-popUp">
+      <span id="operation">node</span>
+      <br />
+      <table style="margin: auto">
+        <tbody>
+          <tr>
+            <td>id</td>
+            <td><input id="node-id" value="new value" /></td>
+          </tr>
+          <tr>
+            <td>label</td>
+            <td><input id="node-label" value="new value" /></td>
+          </tr>
+        </tbody>
+      </table>
+      <input type="button" value="save" id="saveButton" />
+      <input type="button" value="cancel" id="cancelButton" />
+    </div>
+    <div id="mynetwork"></div>
+    <p style="font-size: 1.3rem; color:white;">Clique com o botão direito sobre grafo para copia-lo/salva-lo.</p>
+  </section>
+
+
+  <script src="app.js"></script>
+
+</body>
+
+</html>
