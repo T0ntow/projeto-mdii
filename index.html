@@ -32,23 +32,103 @@
     <div id="container">
       <h2>Selecione o que deseja fazer</h2>
       <ul>
+        <a href="#section-bases">
+          <li>Calcular e converter bases</li>
+        </a>
         <a href="#section-grafos">
-          <li>Criar grafos</li>
-        </a>
-        <a href="">
-          <li>Criar árvores</li>
-        </a>
-        <a href="">
-          <li>sla3 xxxxxxxxxxxxxxxxxxx</li>
-        </a>
-        <a href="">
-          <li>sla3 xxxxxxxxxxxxxxxxxxx</li>
+          <li>Criar grafos e árvores facilmente</li>
         </a>
       </ul>
     </div>
   </main>
   <hr>
+
+  <section id="section-bases">
+    <h2>Calcular e converter bases<br>Calcule e converta qualquer base númerica</h2>
+
+    <div class="grid-container">
+
+      <div class="output">
+        <div class="previous-operand" id="previous-operand">
+          <p id="previous-operand-base"></p>
+          <p id="previous-operand-num1"></p>
+          <p id="previous-operand-op"></p>
+          <p id="previous-operand-num2"></p>
+          <div class="output-lateral">
+            <button onclick="abrir()" id="sobre"><img src="imagens/pergunta.png" alt="sobre"></button>
+            <button onclick="copiarTexto()" id="copiar"><img src="imagens/copiar.png" alt="copiar"></button>
+          </div>
+        </div>
+
+
+        <!-- pop-up -->
+
+        <div class="popup">
+          <p id="popup" style="text-transform: none;">Usar a calculadora é muito simles, primeiramente insira dois
+            números e sua
+            respectiva
+            base, após isso é so clicar na operação desejada e ver o resultado da operação
+          <p style="margin-top: 5px; text-transform: none">OBS: funciona as operações ate a base 36</p>
+          </p>
+
+
+        </div>
+
+        <!-- resultado final -->
+        <div class="current-operand">
+          <div class="current-operand" id="current-operand"></div>
+        </div>
+
+      </div>
+
+      <button class="btn" onclick="adicionarOperador('/')" value="/"><img src="imagens/dividir.png"></button>
+      <button class="btn" onclick="adicionarOperador('*')" value="*"><img src="imagens/multiplicar.png"></button>
+      <button class="btn" onclick="adicionarOperador('-')" value="-"><img src="imagens/subtrair.png"></button>
+      <button class="btn" onclick="adicionarOperador('+')" value="+"><img src="imagens/somar.png"></button>
+      <input class="span-three" type="number" placeholder="Digite a Base" min="2" max="36" id="base"
+        autocomplete="off">
+      <button class="span-one" onclick="clean()"><img src="imagens/limpar.png"></button>
+      <input class="span-three" type="text" placeholder="Digite o Primeiro número" id="num1" autocomplete="off">
+      <button class="span-one column-two" onclick="result()" id="result"><img src="imagens/igual.png" alt=""></button>
+      <input class="span-three" type="text" placeholder="Digite o Segundo número" id="num2" autocomplete="off">
+    </div>
+
+    <div class="converter">
+      <label>Enter Number </label>
+      <input type="text" id="num1Parte2" min="1" max="36" autocomplete="off">
+
+      <label>From Base</label>
+      <div class="rowInput">
+        <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"> - </button>
+        <input id="fromBase" type="number" min="2" max="36" value="10">
+        <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"> + </button>
+      </div>
+
+      <label>To base</label>
+      <div class="rowInput">
+        <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"> - </button>
+        <input id="toBase" type="number" min="2" max="36" value="02" autocomplete="off">
+        <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"> + </button>
+      </div>
+
+      <div>
+        <button type="button" onclick="calcular()" id="converter">Converter</button>
+        <button type="reset" onclick="reset()" id="resetar">Resetar</button>
+      </div>
+      <hr>
+      <div class="resultadoTela">
+        <div class="resultado" id="resultado">RESULT</div>
+        <button onclick="copiarTexto2()" id="copiar"><img src="imagens/copiar.png" alt=""></button>
+      </div>
+      <hr>
+    </div>
+
+  </section>
+  <hr>
+
   <section id="section-grafos">
+    <h2>Crie seus grafos / árvores</h2>
+
     <p>
       <select id="locale" onchange="draw();" disabled style="display: none;">
       </select>
@@ -75,6 +155,7 @@
     <p style="font-size: 1.3rem; color:white;">Clique com o botão direito sobre grafo para copia-lo/salva-lo.</p>
   </section>
 
+  <script src="https://kit.fontawesome.com/904004ee8d.js" crossorigin="anonymous"></script>
 
   <script src="app.js"></script>
 

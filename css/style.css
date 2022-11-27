@@ -8,6 +8,7 @@
 body {
   background-color: rgba(46, 46, 46, 0.9529411765);
   overflow-x: hidden;
+  font-family: cursive;
 }
 
 #section-main {
@@ -20,8 +21,15 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  margin: 50px 0;
-  height: 80vh;
+  margin: 35px 0;
+  height: 95vh;
+  color: #fff;
+}
+#section-grafos h2 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.6rem;
+  letter-spacing: 3px;
 }
 
 hr {
@@ -59,11 +67,11 @@ main {
   height: 100vh;
 }
 main img {
+  min-width: 100%;
+  height: 110%;
   position: absolute;
-  z-index: -10;
-  height: 100vh;
-  width: 100vw;
-  filter: grayscale(100);
+  z-index: -1;
+  filter: grayscale(200%);
 }
 main #container {
   display: flex;
@@ -78,21 +86,28 @@ main #container {
   background-color: #000000;
 }
 main #container h2 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   transform: translateY(-25px);
-  color: #ffffff;
+  color: #4870db;
 }
 main #container ul {
   display: flex;
   flex-direction: column;
-  transform: translate(-70px, -20px);
+  transform: translate(0, -30px);
+  text-align: center;
 }
-main #container ul li {
+main #container ul a {
+  list-style: none;
+  text-decoration: underline;
+  color: white;
+}
+main #container ul a li {
   font-size: 1.4rem;
   margin: 5px 0;
   color: white;
+  list-style: none;
 }
-main #container ul li:hover {
+main #container ul a li:hover {
   cursor: pointer;
   color: #0051ff;
   transition-duration: 0.5s;
@@ -120,7 +135,7 @@ header .container-logosMyP a img {
   height: 40px;
 }
 header p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: bolder;
   margin-left: 5vw;
   -webkit-animation: 3s infinite alternate;
@@ -146,8 +161,8 @@ header p {
   flex-direction: column;
   font-size: 1.2rem;
   position: absolute;
-  width: 20vw;
-  height: 25vh;
+  width: 23vw;
+  height: 28vh;
   border-radius: 10px;
   color: white;
   z-index: 10;
@@ -188,4 +203,451 @@ header p {
   border-radius: 5px;
   font-size: 1.3rem;
   cursor: pointer;
+}
+
+#section-bases {
+  display: flex;
+  justify-content: space-evenly;
+  background-image: linear-gradient(#202020, rgb(99, 99, 99));
+  color: #fff;
+  padding: 40px 0;
+}
+#section-bases input {
+  font-size: 1.4rem;
+  text-indent: 10px;
+  min-height: 40px;
+  width: 100%;
+  text-transform: uppercase;
+  outline: none;
+  background-color: #505050;
+  color: #fff;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+  border-top: 1px solid rgb(31, 31, 31);
+  box-shadow: 6px 5px 5px black;
+}
+#section-bases input::-moz-placeholder {
+  font-size: 1rem;
+}
+#section-bases input:-ms-input-placeholder {
+  font-size: 1rem;
+}
+#section-bases input::placeholder {
+  font-size: 1rem;
+}
+#section-bases input::-webkit-scrollbar {
+  width: 13px;
+}
+#section-bases input::-webkit-scrollbar-track {
+  background: rgb(19, 19, 19);
+}
+#section-bases input::-webkit-scrollbar-thumb {
+  background-color: rgb(41, 41, 41);
+  border-radius: 20px;
+  border: 3px solid rgb(117, 117, 117);
+}
+#section-bases h2 {
+  margin-top: 30px;
+  position: absolute;
+  text-align: center;
+  font-size: 1.6rem;
+  letter-spacing: 3px;
+}
+#section-bases #previous-operand-base {
+  margin: 0 15px;
+  font-size: 1.1rem;
+  color: rgba(255, 148, 60, 0.7607843137);
+}
+#section-bases #result {
+  background-color: #00bcd4;
+  color: black;
+}
+#section-bases .grid-container {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  margin: 23vh 0 10vh 0;
+  grid-template-columns: repeat(4, 90px);
+  grid-template-rows: minmax(128px, auto) repeat(4, 88px);
+  box-shadow: 3px 7px 14px 6px #000000;
+}
+#section-bases .grid-container input {
+  box-shadow: none;
+}
+#section-bases .grid-container button {
+  font-size: 2rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: #55a8ff;
+  color: #fff;
+}
+#section-bases .grid-container button:hover {
+  opacity: 0.7;
+}
+#section-bases .grid-container .output {
+  grid-column: 1/-1;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  padding-right: 25px;
+  word-wrap: break-word;
+  word-break: break-all;
+  text-transform: uppercase;
+  background: #202020;
+  max-height: 130px;
+}
+#section-bases .grid-container .output .previous-operand {
+  font-size: 1.2rem;
+  max-height: 45px;
+  display: flex;
+  overflow: hidden;
+  color: #fff;
+}
+#section-bases .grid-container .output .current-operand {
+  text-align: right;
+  max-width: 90%;
+  margin-top: 8px;
+  font-size: 1.6rem;
+  white-space: nowrap;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+#section-bases button img {
+  width: 35px;
+  height: 35px;
+}
+#section-bases .column-two {
+  grid-row: span 2;
+}
+#section-bases .span-two {
+  grid-column: span 2;
+}
+#section-bases .span-three {
+  grid-column: span 3;
+}
+#section-bases .span-for {
+  grid-column: span 4;
+}
+#section-bases .previous-operand img {
+  width: 23px;
+  height: 23px;
+}
+#section-bases .previous-operand .output-lateral {
+  position: absolute;
+  transform: translateX(318px);
+}
+#section-bases .previous-operand div button {
+  display: flex;
+  border: 1px solid;
+  margin-top: 17px;
+  border-radius: 50%;
+  background-color: #7aa6ff;
+}
+#section-bases .popup {
+  text-align: center;
+  display: none;
+  font-size: 1rem;
+}
+#section-bases #copiar:hover {
+  cursor: pointer;
+  transition: 0.5s ease;
+  transform: scale(1.4);
+}
+#section-bases #sobre:hover {
+  cursor: pointer;
+  transition: 0.5s ease;
+  transform: scale(1.4);
+}
+#section-bases #copiar:focus {
+  background-color: #00bcd4;
+}
+#section-bases #sobre:focus {
+  background-color: #00bcd4;
+}
+#section-bases .converter {
+  text-align: center;
+  font-size: 1.5rem;
+  width: 360px;
+  padding: 10px;
+  margin-top: 23vh;
+  height: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1c1c1c;
+  box-shadow: 3px 7px 14px 6px #000000;
+}
+#section-bases .converter div {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 15px;
+}
+#section-bases .converter .resultadoTela {
+  height: 110px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+#section-bases .converter .resultadoTela .resultado {
+  color: #fff;
+  border: none;
+  text-align: center;
+  box-shadow: none;
+  max-width: 100%;
+  height: 100%;
+  word-wrap: break-word;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+#section-bases .converter .resultadoTela button {
+  width: 50px;
+  height: 25px;
+  display: flex;
+  border: 1px solid;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  background-color: #7aa6ff;
+}
+#section-bases .converter .resultadoTela button img {
+  width: 25px;
+  height: 25px;
+}
+#section-bases .converter::before {
+  width: 10px;
+  height: 10px;
+}
+#section-bases #converter,
+#section-bases #resetar {
+  border: 0;
+  width: 90px;
+  height: 25px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+#section-bases #converter:hover,
+#section-bases #resetar:hover {
+  transition-duration: 0.3s;
+  opacity: 0.7;
+}
+#section-bases #converter {
+  background-color: #00bcd4;
+}
+#section-bases #resetar {
+  background-color: #fd8171;
+}
+#section-bases label {
+  font-size: 1.4rem;
+}
+#section-bases .converter hr {
+  width: 100%;
+  background-color: #fff;
+  border: none;
+  border-radius: 150%;
+  height: 5px;
+}
+#section-bases .rowInput {
+  display: flex;
+  align-items: center;
+  max-width: 70%;
+}
+#section-bases .rowInput button {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  width: 30px;
+  height: 30px;
+  border: black solid 3px;
+  background-color: #7aa6ff;
+}
+#section-bases .rowInput button:hover {
+  background-color: #ffffff;
+  transition-duration: 0.5s;
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+#section-bases .rowInput input {
+  text-indent: 0;
+  max-width: 120px;
+  padding: 0 10px;
+  text-align: center;
+}
+
+@media screen and (max-width: 840px) {
+  header p {
+    font-size: 0.8rem;
+  }
+  #section-grafos #network-popUp {
+    width: 40vw;
+  }
+  #section-bases {
+    flex-direction: column;
+    align-items: center;
+  }
+  #section-bases h2 {
+    position: inherit;
+  }
+  #section-bases .grid-container {
+    grid-template-columns: repeat(4, 120px);
+    grid-template-rows: minmax(140px, auto) repeat(4, 110px);
+  }
+  #section-bases .grid-container .output .previous-operand {
+    font-size: 2rem;
+  }
+  #section-bases .grid-container .output .previous-operand .output-lateral {
+    transform: translateX(420px);
+  }
+  #section-bases .grid-container .output .previous-operand .output-lateral button {
+    margin-top: 15px;
+  }
+  #section-bases .grid-container .output .previous-operand .output-lateral button img {
+    width: 30px;
+    height: 30px;
+  }
+  #section-bases .grid-container .output .current-operand {
+    font-size: 3rem;
+  }
+  #section-bases .grid-container input {
+    font-size: 2rem;
+  }
+  #section-bases .converter {
+    height: 550px;
+    width: 480px;
+    font-size: 1.8rem;
+  }
+  #section-bases .converter input {
+    font-size: 2rem;
+  }
+  #section-bases .converter .resultadoTela {
+    height: 155px;
+  }
+  #section-bases #previous-operand-base {
+    font-size: 1.5rem;
+  }
+  #section-bases input {
+    min-height: 50px;
+  }
+  #section-bases label {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 685px) {
+  main #container {
+    width: 75vw;
+  }
+  main #container ul {
+    transform: translate(0px, -10px);
+  }
+  main #container ul a li {
+    font-size: 1.3rem;
+  }
+  #section-grafos #mynetwork {
+    width: 85vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  main #container {
+    width: 75vw;
+  }
+  main #container h2 {
+    font-size: 1.3rem;
+  }
+  main #container ul {
+    transform: translate(0px, -10px);
+  }
+  main #container ul a li {
+    font-size: 1.1rem;
+  }
+  #section-grafos #network-popUp {
+    width: 50vw;
+  }
+  #section-bases .grid-container {
+    grid-template-columns: repeat(4, 90px);
+    grid-template-rows: minmax(128px, auto) repeat(4, 88px);
+    box-shadow: 3px 7px 14px 6px #000000;
+  }
+  #section-bases .grid-container .output .previous-operand {
+    font-size: 1.5rem;
+  }
+  #section-bases .grid-container .output .previous-operand .output-lateral {
+    transform: translateX(290px);
+  }
+  #section-bases .grid-container .output .previous-operand .output-lateral button {
+    margin-top: 10px;
+  }
+  #section-bases .grid-container .output .previous-operand .output-lateral button img {
+    width: 25px;
+    height: 25px;
+  }
+  #section-bases .grid-container .output .current-operand {
+    font-size: 2rem;
+  }
+  #section-bases .grid-container input {
+    font-size: 1.4rem;
+  }
+  #section-bases .converter {
+    height: 480px;
+    width: 360px;
+    font-size: 1.5rem;
+    padding: 15px;
+  }
+  #section-bases .converter input {
+    font-size: 1.5rem;
+  }
+  #section-bases .converter .resultadoTela {
+    margin: 0;
+    height: 113px;
+  }
+  #section-bases .converter .resultadoTela .resultado {
+    height: 45%;
+  }
+}
+@media screen and (max-width: 400px) {
+  #section-bases .grid-container {
+    grid-template-columns: repeat(4, 75px);
+    grid-template-rows: minmax(100px, auto) repeat(4, 88px);
+    box-shadow: 3px 7px 14px 6px #000000;
+  }
+  #section-bases .grid-container .output .previous-operand {
+    font-size: 1.5rem;
+  }
+  #section-bases .grid-container .output .previous-operand .output-lateral {
+    transform: translateX(290px);
+  }
+  #section-bases .grid-container .output .previous-operand .output-lateral button {
+    display: none;
+  }
+  #section-bases .grid-container .output .current-operand {
+    font-size: 2rem;
+  }
+  #section-bases .grid-container input {
+    font-size: 1.4rem;
+  }
+  #section-bases .converter {
+    height: 480px;
+    width: 360px;
+    font-size: 1.5rem;
+    padding: 15px;
+  }
+  #section-bases .converter input {
+    font-size: 1.5rem;
+  }
+  #section-bases .converter .resultadoTela {
+    margin: 0;
+    height: 115px;
+  }
+  #section-bases .converter .resultadoTela .resultado {
+    height: 45%;
+  }
+  #section-grafos #mynetwork {
+    width: 85vw;
+  }
+  #section-grafos p {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */
