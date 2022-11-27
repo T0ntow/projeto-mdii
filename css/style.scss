@@ -545,6 +545,26 @@ header {
   }
 }
 
+footer{
+  margin-top: 50px;
+  height: 10vh;
+  width: 100%;
+  background-color: #1C1C1C;
+
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  align-items: center;
+  color: #ffff;
+
+  border-top: 2px solid black;
+  a{
+    text-decoration: none;
+    list-style: underline;
+    color: #ffff;
+  }
+
+}
 //responsividade
 
 @media screen and (max-width: 840px) {
@@ -774,6 +794,15 @@ header {
     }
     p {
       display: none;
+    }
+  }
+
+  footer{
+    a{
+      display: none;
+    }
+    span{
+      font-size: .9rem;
     }
   }
 }
