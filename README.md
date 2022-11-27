@@ -5,8 +5,6 @@ Projeto feito por: João Henrique, Rafael de Jesus e Wellington Batista - alunos
 ### Metas
 
 - [x] Criação do Grafo
-- [ ] Matriz do grafo
-- [ ] Operações com as matrizes
 
 ### 🛠 Tecnologias/Bibliotecas
 
